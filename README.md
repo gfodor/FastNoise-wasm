@@ -5,7 +5,7 @@
 ```
 emsdk activate 3.1.19
 git clone --recursive https://github.com/grind086/FastNoise-wasm.git
-emcc -sEXPORT_NAME=FastNoise -sMODULARIZE=1 -msimd128 --std=c++11 --bind FastNoise/FastNoise.cpp -sWASM=1 -O0 EMBindings.cpp -o bin/FastNoise.js
+emcc -sEXPORT_NAME=FastNoise -sMODULARIZE=1 --std=c++11 --bind FastNoise/FastNoise.cpp -sWASM=1 -sNO_DYNAMIC_EXECUTION=1 -O0 EMBindings.cpp -o bin/FastNoise.js
 ```
 
 ## API
